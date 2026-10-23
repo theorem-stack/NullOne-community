@@ -1,0 +1,11 @@
+[Unit]
+Description=Start NullOne before the weekly EIA gas storage release
+
+[Timer]
+# Starts 30 minutes before the nominal 10:30 AM ET release; the runner sleeps until release.
+OnCalendar=Thu *-*-* 10:00:00
+Timezone=America/New_York
+Persistent=true
+
+[Install]
+WantedBy=timers.target

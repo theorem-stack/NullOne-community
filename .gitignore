@@ -1,0 +1,69 @@
+# Secrets and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.kdbx
+id_rsa
+id_ed25519
+secrets/
+credentials.json
+service-account*.json
+.aws/
+.ssh/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+.venv/
+venv/
+env/
+*.egg-info/
+.eggs/
+*.egg
+
+# Build output and packaged binaries
+build/
+dist/
+dist-linux/
+*.manifest
+*.spec.bak
+*.so
+*.dylib
+*.exe
+*.pkg
+*.pyz
+
+# Logs, notebooks, and generated reports
+logs/
+*.log
+.ipynb_checkpoints/
+replay_report.json
+*_report.json
+
+# Local data dumps (do not redistribute vendor or archived market data)
+data/
+snapshots/
+*.parquet
+*.feather
+*.h5
+*.hdf5
+
+# OS and editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~

@@ -1,0 +1,17 @@
+[Unit]
+Description=NullOne WNGSR release runner
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=nullone
+Group=nullone
+WorkingDirectory=%REPO_ROOT%
+EnvironmentFile=-/opt/nullone/.env
+ExecStart=%REPO_ROOT%/.venv/bin/nullone run --mode %NULLONE_MODE%
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

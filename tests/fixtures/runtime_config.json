@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "engine": "nullone",
+  "strategy": {
+    "name": "nullone_wngsr_kalshi",
+    "event_id": "eia_wngsr_2026-05-15",
+    "release_at_et": "2026-05-22T10:30:00-04:00",
+    "mode": "paper"
+  },
+  "event": {
+    "source": "eia_wngsr",
+    "week_ending": "2026-05-15",
+    "metric": "net_change_bcf",
+    "region": "lower48"
+  },
+  "markets": {
+    "brackets": [
+      {
+        "label": "96-100",
+        "min": 96,
+        "max": 100,
+        "kalshi": {
+          "market_ticker": "KXGASSTORAGE-MAY15-98"
+        },
+        "polymarket": {
+          "token_id": "1234567890",
+          "tick_size": "0.01",
+          "neg_risk": false
+        }
+      },
+      {
+        "label": "101-105",
+        "min": 101,
+        "max": 105,
+        "kalshi": {
+          "market_ticker": "KXGASSTORAGE-MAY15-103"
+        },
+        "polymarket": {
+          "token_id": "0987654321",
+          "tick_size": "0.01",
+          "neg_risk": false
+        }
+      },
+      {
+        "label": "106-110",
+        "min": 106,
+        "max": 110,
+        "kalshi": {
+          "market_ticker": "KXGASSTORAGE-MAY15-108"
+        },
+        "polymarket": {
+          "token_id": "1122334455",
+          "tick_size": "0.01",
+          "neg_risk": false
+        }
+      }
+    ]
+  },
+  "execution": {
+    "min_edge_after_fees": 0.05,
+    "max_entry_price": 0.92,
+    "release_capital_usd": 100,
+    "execution_strategy": "auto",
+    "mode": "paper"
+  },
+  "placement": {
+    "provider": "aws",
+    "region": "us-east-1",
+    "runtime": "ec2",
+    "instance_type": "c7i.large"
+  },
+  "runtime": {
+    "run_id": "wngsr-2026-05-22",
+    "warmup_starts_at": "2026-05-22T10:00:00-04:00",
+    "profiler_blackout_at": "2026-05-22T10:28:00-04:00",
+    "execute_at": "2026-05-22T10:30:00-04:00"
+  }
+}

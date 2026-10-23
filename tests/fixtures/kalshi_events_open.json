@@ -1,0 +1,64 @@
+{
+  "events": [
+    {
+      "event_ticker": "KXGASSTORAGE-MAY15",
+      "series_ticker": "KXGASSTORAGE",
+      "title": "Weekly EIA Natural Gas Storage - week ending May 15, 2026",
+      "subtitle": "Lower 48 net change in Bcf",
+      "status": "open",
+      "markets": [
+        {
+          "ticker": "KXGASSTORAGE-MAY15-96",
+          "status": "open",
+          "floor_strike": 96,
+          "cap_strike": 100,
+          "title": "96-100 Bcf"
+        },
+        {
+          "ticker": "KXGASSTORAGE-MAY15-101",
+          "status": "open",
+          "floor_strike": 101,
+          "cap_strike": 105,
+          "title": "101-105 Bcf"
+        },
+        {
+          "ticker": "KXGASSTORAGE-MAY15-106",
+          "status": "active",
+          "floor_strike": 106,
+          "cap_strike": 110,
+          "title": "106-110 Bcf"
+        }
+      ]
+    },
+    {
+      "event_ticker": "KXGASSTORAGE-MAY08",
+      "series_ticker": "KXGASSTORAGE",
+      "title": "Weekly EIA Natural Gas Storage - week ending May 8, 2026",
+      "status": "open",
+      "markets": [
+        {
+          "ticker": "KXGASSTORAGE-MAY08-90",
+          "status": "open",
+          "floor_strike": 90,
+          "cap_strike": 94,
+          "title": "90-94 Bcf"
+        },
+        {
+          "ticker": "KXGASSTORAGE-MAY08-95",
+          "status": "open",
+          "floor_strike": 95,
+          "cap_strike": 99,
+          "title": "95-99 Bcf"
+        },
+        {
+          "ticker": "KXGASSTORAGE-MAY08-100",
+          "status": "open",
+          "floor_strike": 100,
+          "cap_strike": 104,
+          "title": "100-104 Bcf"
+        }
+      ]
+    }
+  ],
+  "cursor": null
+}

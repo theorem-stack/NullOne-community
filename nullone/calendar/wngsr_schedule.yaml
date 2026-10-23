@@ -1,0 +1,36 @@
+# EIA Weekly Natural Gas Storage Report — holiday release overrides.
+# Default schedule: Thursdays 10:30 AM America/New_York.
+# Source: https://ir.eia.gov/ngs/schedule.html
+
+default:
+  weekday: thursday
+  time: "10:30"
+
+overrides:
+  - date: "2025-01-03"
+    time: "10:30"
+    note: "New Year's Day — Friday release"
+  - date: "2025-01-08"
+    time: "12:00"
+    note: "National Day of Mourning — Wednesday release"
+  - date: "2025-06-18"
+    time: "12:00"
+    note: "Juneteenth — Wednesday release"
+  - date: "2025-11-14"
+    time: "10:30"
+    note: "Veterans Day — Friday release"
+  - date: "2025-11-26"
+    time: "12:00"
+    note: "Thanksgiving — Wednesday release"
+  - date: "2025-12-29"
+    time: "12:00"
+    note: "Christmas — Monday release"
+  - date: "2025-12-31"
+    time: "12:00"
+    note: "New Year's Day — Wednesday release"
+  - date: "2026-11-13"
+    time: "10:30"
+    note: "Veterans Day — Friday release"
+  - date: "2026-11-25"
+    time: "12:00"
+    note: "Thanksgiving — Wednesday release"

@@ -1,0 +1,39 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "nullone"
+version = "0.1.0"
+description = "Programmatic speed arbitrage on EIA Weekly Natural Gas Storage releases"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "certifi>=2024.0.0",
+    "httpx>=0.28.0",
+    "orjson>=3.10.0",
+    "pyyaml>=6.0.2",
+    "cryptography>=44.0.0",
+    "websockets>=14.0",
+    "py-clob-client-v2>=0.1.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.0",
+    "pytest-asyncio>=0.25.0",
+]
+
+[project.scripts]
+nullone = "nullone.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["nullone"]
+include = [
+    "nullone/fixtures/*.json",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]

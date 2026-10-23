@@ -1,0 +1,47 @@
+event_id: test_kalshi_multileg_gtaprice
+kalshi_event_ticker: KXGTAPRICE
+week_ending: "2026-05-23"
+release_at_et: null
+metric: test_value
+region: test
+description: "Read-only multi-leg planner test using Kalshi GTA VI PS5 price brackets."
+brackets:
+  - label: "58-62"
+    min: 58
+    max: 62
+    kalshi:
+      market_ticker: "KXGTAPRICE-60"
+  - label: "68-72"
+    min: 68
+    max: 72
+    kalshi:
+      market_ticker: "KXGTAPRICE-70"
+  - label: "78-82"
+    min: 78
+    max: 82
+    kalshi:
+      market_ticker: "KXGTAPRICE-80"
+  - label: "88-92"
+    min: 88
+    max: 92
+    kalshi:
+      market_ticker: "KXGTAPRICE-90"
+  - label: "98-102"
+    min: 98
+    max: 102
+    kalshi:
+      market_ticker: "KXGTAPRICE-100"
+execution:
+  min_edge_after_fees: 0.02
+  max_entry_price: 0.98
+  release_capital_usd: 25
+  parse_error_rate: 0.02
+  min_leg_usd: 1
+  min_fill_prob: 0
+  winner_yes_min_pct: 0
+  max_slippage_yes: 0.02
+  absolute_floor_yes: 0.01
+  force_winner_first: false
+  enable_loser_no: true
+  execution_strategy: auto
+  mode: paper

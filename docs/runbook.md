@@ -11,4 +11,4 @@ scripts/publish-s3-binary.sh \
 
 Optional flags: `--region`, `--skip-build`, `--help`.
 
-Pass the destination bucket on the command line. Keep API keys, PEM files, and account identifiers out of the repo. See `scripts/publish-s3-binary.sh` and `docs/NULLONE_S3_RELEASE_SPEC.md`.
+Pass the destination bucket on the command line. Keep API keys, PEM files, and account identifiers out of the repo. See [`scripts/publish-s3-binary.sh`](../scripts/publish-s3-binary.sh) and [`NULLONE_S3_RELEASE_SPEC.md`](NULLONE_S3_RELEASE_SPEC.md).

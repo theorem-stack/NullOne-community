@@ -1,3 +1,5 @@
+[![pytest](https://github.com/theorem-stack/NullOne-community/actions/workflows/pytest.yml/badge.svg)](https://github.com/theorem-stack/NullOne-community/actions/workflows/pytest.yml)
+
 # NullOne
 
 NullOne is a Python research system for the EIA Weekly Natural Gas Storage Report (WNGSR). On release, it reads the Lower 48 net change in billion cubic feet, maps that integer onto bracket contracts, and either simulates or submits fee-aware limit orders on Kalshi and, when configured, Polymarket.
@@ -74,6 +76,33 @@ nullone run --mode paper \
 ```
 
 `tests/fixtures/wngsr_sample.json` has `net_change` 101. The example spec maps that to bracket `101-105`. The sample spec sets `execution_strategy: auto`, so this path uses the multi-leg allocator on a simulated book (YES ask 0.85, NO ask 0.60) rather than the single-leg risk gate.
+
+That command writes one JSON file under `logs/releases/`. This excerpt is the start of `eia_wngsr_2026-05-15_20261024T164834Z.json` from a run against that fixture. The record continues with timestamps and three `kalshi_multi_leg` paper legs.
+
+```json
+{
+  "event_id": "eia_wngsr_2026-05-15",
+  "t_fetch_ms": 0.047,
+  "t_parse_ms": 0.03,
+  "t_map_ms": 0.002,
+  "t_order_ms": 0.005,
+  "net_change_bcf": 101,
+  "winning_bracket": "101-105",
+  "kalshi": {
+    "submitted": true,
+    "paper": true,
+    "batch_id": "8c007afd-4fd6-45d3-b9ef-ee5d355c1408",
+    "leg_count": 3
+  },
+  "polymarket": {
+    "submitted": true,
+    "fill_price": 0.85,
+    "fill_size": 117.64705882352942,
+    "order_id": null,
+    "paper": true
+  },
+  "mode": "paper",
+```
 
 Other commands, all defined in `nullone/cli.py`:
 
